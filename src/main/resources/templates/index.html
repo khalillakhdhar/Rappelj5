@@ -5,6 +5,14 @@
 <title>Formulaire de rappel</title>
 </head>
 <body>
+<form action="#" th:action="@{/save}" th:object="${rappel}" method="post"></form>
+<table border="0" cellpadding="10">
+<tr>
+<td>Titre</td><td><input type="text" minlength="4" name="nom" th:feild="*{nom}"></td></tr>
+<td>Date</td><td><input type="date" name="date" th:feild="*{date}"></td></tr>
+<td>Type</td><td><select th:feild="*{type}" name="type"><option value="Anniversaire">anniversaire</option><option value="Rendez-vous">rendez-vous</option><option value="Autre">Autre</option></select></td></tr>
+<tr><td align="center" colspan="2"> <input type="submit" value="envoyer"></td></tr>
+</table>
 
 </body>
 </html>
